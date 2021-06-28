@@ -1,11 +1,21 @@
 import './index.css'
 
 const TabItem = props => {
-  const {eachTab} = props
-  const {displayText} = eachTab
+  const {eachTab, updateTabId, isActive} = props
+  const {displayText, tabId} = eachTab
+  const onClickTab = () => {
+    updateTabId(tabId)
+  }
+  const activeTab = isActive ? 'style' : ''
   return (
     <li>
-      <h1 className="tab-item">{displayText}</h1>
+      <button
+        type="button"
+        onClick={onClickTab}
+        className={`tab-item ${activeTab}`}
+      >
+        {displayText}
+      </button>
     </li>
   )
 }

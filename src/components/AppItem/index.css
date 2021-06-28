@@ -1,6 +1,9 @@
 .app-icon {
   width: 40%;
 }
+.appName {
+  font-family: bree serif;
+}
 .app-item {
   width: 160px;
   height: 150px;
